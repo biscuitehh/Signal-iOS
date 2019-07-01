@@ -24,7 +24,7 @@ if [[ -z "${BD_PROJECT_NAME}" ]]; then
   echo "You need to set a project name in order to scan a project. Exiting ..."
   exit 1
 else
-  DETECT_ARGUMENTS="${DETECT_ARGUMENTS} --detect.project.name=${BD_PROJECT_NAME}"
+  DETECT_ARGUMENTS="${DETECT_ARGUMENTS} --detect.project.name=\"${BD_PROJECT_NAME}\""
 fi
 
 # Project Version
@@ -80,7 +80,7 @@ else
 fi
 
 # Fuse some naming properties together (these shouldn't change formatting)
-BD_UNIQUE_NAME="${BD_PROJECT_NAME}_${BD_PROJECT_VERSION}"
+BD_UNIQUE_NAME="\"${BD_PROJECT_NAME}_${BD_PROJECT_VERSION}\""
 DETECT_ARGUMENTS="${DETECT_ARGUMENTS} --detect.code.location.name=${BD_UNIQUE_NAME}"
 DETECT_ARGUMENTS="${DETECT_ARGUMENTS} --detect.bom.aggregate.name=${BD_UNIQUE_NAME}_BOM"
 
