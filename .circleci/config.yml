@@ -15,16 +15,20 @@ jobs:
 
       # Setup
       - run:
-          name: Bundle
+          name: Bundle Install
           command: bundle install
 
       - run:
-          name: Build dependencies
+          name: Build Dependencies
           command: make dependencies
 
-      # - run:
-      #     name: Test
-      #     command: make test
+      - fun:
+          name: Build
+          command: make build
+
+      - run:
+          name: Test
+          command: make test
 
       - run:
           name: Hub Detect
