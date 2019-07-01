@@ -15,8 +15,8 @@ jobs:
 
       # Setup
       - run:
-          name: setup
-          command: make setup
+          name: bundle install
+          command: bundle install
 
       - run:
           name: dependencies
