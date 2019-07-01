@@ -22,7 +22,7 @@ jobs:
           name: Build Dependencies
           command: make dependencies
 
-      - fun:
+      - run:
           name: Build
           command: make build
 
